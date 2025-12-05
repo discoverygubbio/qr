@@ -1,10 +1,12 @@
 function go() {
   const statusBox = document.getElementById("status");
+  const iframeContainer = document.getElementById("iframe-container");
 
   const path = window.location.pathname.replace(/^\/+/, "");
 
   if (!path) {
-    statusBox.innerHTML = "QR Manager – no code provided.";
+    statusBox.style.display = "none";
+    iframeContainer.style.display = "block";
     return;
   }
 
